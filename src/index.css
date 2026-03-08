@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-gold: #b88a4d;
+  --color-gold-light: #d4af37;
+  --color-gold-dark: #8c6239;
+  --color-neon: #00ff41; /* The hawk's eye color */
+  --color-dark-bg: #0a0a0a;
+  --color-dark-card: #151515;
+  --color-dark-border: #2a241e; /* Bronze-tinted border */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .slanted-clip {
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  }
+  .slanted-clip-right {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  }
+  .logo-trapezoid {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  }
+  .text-glow-gold {
+    text-shadow: 0 0 15px rgba(184, 138, 77, 0.4);
+  }
+  .text-glow-neon {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  }
+  .border-glow-gold {
+    box-shadow: 0 0 20px rgba(184, 138, 77, 0.15);
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #b88a4d 0%, #d4af37 50%, #8c6239 100%);
+  }
+}
+
